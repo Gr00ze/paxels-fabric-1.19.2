@@ -55,7 +55,9 @@ public class PaxelsMod implements ModInitializer {
 		// Proceed with mild caution.
 		Item.Settings itemSettings = new Item.Settings()
 				.maxCount(1)
-				.rarity(Rarity.COMMON);
+				.rarity(Rarity.COMMON)
+				.group(ITEM_GROUP);
+
 
 
 
@@ -71,7 +73,6 @@ public class PaxelsMod implements ModInitializer {
 							new Identifier(modID, TOOLMATERIALNAMES[i] +"_paxel"),
 							new PaxelItem(TOOLMATERIALS[i], itemSettings));
 
-
 		}
 		LOGGER.info("Hi guys, I'm loading paxels for you!");
 
@@ -79,4 +80,5 @@ public class PaxelsMod implements ModInitializer {
 
 
 	}
+
 }
