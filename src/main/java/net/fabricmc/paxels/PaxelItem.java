@@ -18,7 +18,8 @@ public class PaxelItem extends MiningToolItem {
     TagKey<Block> showelTagKey = BlockTags.SHOVEL_MINEABLE;
 
     private static final float pickaxeAS=-2.8F,axeAS=-3.2F,shovelAS=-3.0F;
-    private static final float functionAS = (float)Math.pow(Math.E,(pickaxeAS + axeAS + shovelAS)*0.3) - 4;
+    //private static final float functionAS = (float)Math.pow(Math.E,(pickaxeAS + axeAS + shovelAS)*0.3) - 4;
+    private static final float functionAS = getNewAttackSpeed(pickaxeAS,axeAS,shovelAS);
     private  static final float baseAttackDamage = 1;
     protected PaxelItem(ToolMaterial material, Settings settings) {
         super(baseAttackDamage + material.getAttackDamage() * 3, functionAS, material, null, settings);
@@ -39,8 +40,20 @@ public class PaxelItem extends MiningToolItem {
         } else if (i < 2 && state.isIn(BlockTags.NEEDS_IRON_TOOL)) {
             return false;
         } else {
-            return i < 1 && state.isIn(BlockTags.NEEDS_STONE_TOOL) ? false : state.isIn(this.axeTagKey) || state.isIn(this.pickaxeTagKey) || state.isIn(this.showelTagKey);
+            return (i >= 1 || !state.isIn(BlockTags.NEEDS_STONE_TOOL)) && (state.isIn(this.axeTagKey) || state.isIn(this.pickaxeTagKey) || state.isIn(this.showelTagKey));
         }
     }
+
+
+
+    private static float getNewAttackSpeed(float ...attackSpeeds){
+        float reloadTime = 0;
+        for (float speed:attackSpeeds) {
+            reloadTime +=20/(speed+4);
+        }
+        return 20/reloadTime-4;
+    }
+
+
 
 }
