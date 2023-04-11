@@ -17,9 +17,10 @@ public class PaxelsRecipeProvider extends FabricRecipeProvider {
 
     @Override
     protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-        ShapedRecipeJsonBuilder.create(PaxelsMod.PAXELS[0])
+        /*ShapedRecipeJsonBuilder.create(PaxelsMod.PAXELS[0])
                 .pattern("CCC,CSX,SCX")
                 .input('C', Blocks.COBBLESTONE)
                 .input('S', Items.STICK).offerTo(exporter);
+    */
     }
 }
