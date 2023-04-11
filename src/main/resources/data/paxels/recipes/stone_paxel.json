@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ASP",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "A": {
+      "item": "minecraft:stone_axe"
+    },
+    "S": {
+      "item": "minecraft:stone_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "paxels:stone_paxel",
+    "count": 1
+  }
+}
