@@ -18,6 +18,7 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": ["net.fabric.paxels.PaxelsDataGenerator"],
     "main": [
       "net.fabricmc.paxels.PaxelsMod"
     ]
