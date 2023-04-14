@@ -58,6 +58,8 @@ public class PaxelsMod implements ModInitializer {
 				.rarity(Rarity.COMMON)
 				.group(ITEM_GROUP);
 
+		//some random words TO DELETE
+
 
 
 
