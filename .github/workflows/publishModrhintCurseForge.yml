@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: Publish (CurseForge/Modrinth/GitHub)
-        uses: Kir-Antipov/mc-publish@v3.2
+        uses: Kir-Antipov/mc-publish
         with:
           curseforge-id: fabric-paxels
           curseforge-token: "${{env.CURSEFORGE_TOKEN}}"
@@ -53,7 +53,7 @@ jobs:
 
           name: "${{env.RELEASE_NAME}}"
           version: "${{env.VERSION}}"
-          version-type: release
+          version-type: alpha
           changelog-file: CHANGELOG.md
 
           loaders: fabric
