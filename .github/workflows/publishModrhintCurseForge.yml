@@ -42,10 +42,9 @@ jobs:
       - name: Publish (CurseForge/Modrinth/GitHub)
         uses: Kir-Antipov/mc-publish@v3.2
         with:
-          curseforge-id: fabric-paxels
-          curseforge-token: "${{env.CURSEFORGE_TOKEN}}"
 
-
+          modrinth-id: simple-paxels
+          modrinth-token: "${{env.MODRINTH_TOKEN}}"
 
           github-tag: "v${{env.VERSION}}"
           github-token: "${{env.GITHUB_TOKEN}}"
