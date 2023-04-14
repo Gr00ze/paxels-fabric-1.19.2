@@ -3,8 +3,10 @@ package net.fabricmc.paxels;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.RecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Items;
 
@@ -17,10 +19,14 @@ public class PaxelsRecipeProvider extends FabricRecipeProvider {
 
     @Override
     protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-        /*ShapedRecipeJsonBuilder.create(PaxelsMod.PAXELS[0])
-                .pattern("CCC,CSX,SCX")
-                .input('C', Blocks.COBBLESTONE)
-                .input('S', Items.STICK).offerTo(exporter);
-    */
+//        ShapedRecipeJsonBuilder.create(PaxelsMod.PAXELS[0])
+//                .pattern("CCC")
+//                .pattern("CS ")
+//                .pattern("SC ")
+//                .input('C', Blocks.COBBLESTONE)
+//                .input('S', Items.STICK)
+//                .offerTo(exporter);
+        ShapelessRecipeJsonBuilder.create(PaxelsMod.PAXELS[0]).input(Items.COBBLESTONE).offerTo(exporter);
+
     }
 }
