@@ -52,8 +52,7 @@ jobs:
           github-token: "${{env.GITHUB_TOKEN}}"
 
           name: "${{env.RELEASE_NAME}}"
-          version: "${{env.VERSIO
-          N}}"
+          version: "${{env.VERSION}}"
           version-type: release
           changelog-file: CHANGELOG.md
 
