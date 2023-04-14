@@ -43,7 +43,8 @@ jobs:
         uses: Kir-Antipov/mc-publish@v3.2
         with:
 
-          modrinth-id: simple-paxels
+
+          modrinth-id: UCeSj1sE
           modrinth-token: "${{env.MODRINTH_TOKEN}}"
 
           github-tag: "v${{env.VERSION}}"
