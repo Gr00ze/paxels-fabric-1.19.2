@@ -1,3 +1,8 @@
 {
-  "item.paxels.wood_paxel": "Wood Paxel"
+  "item.paxels.wood_paxel": "Wood Paxel",
+  "item.paxels.stone_paxel": "Stone Paxel",
+  "item.paxels.iron_paxel": "Iron Paxel",
+  "item.paxels.gold_paxel": "Gold Paxel",
+  "item.paxels.diamond_paxel": "Diamond Paxel",
+  "item.paxels.netherite_paxel": "Netherite Paxel"
 }

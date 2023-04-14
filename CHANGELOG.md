@@ -1,1 +1,2 @@
-this is a first changelog
+-Balanced Attack speed of every paxels \
+-Added en_us.json
