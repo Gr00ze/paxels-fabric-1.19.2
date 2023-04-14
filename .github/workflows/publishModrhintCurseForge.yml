@@ -40,7 +40,7 @@ jobs:
         run: ./gradlew clean build
 
       - name: Publish (CurseForge/Modrinth/GitHub)
-        uses: Kir-Antipov/mc-publish
+        uses: Kir-Antipov/mc-publish@v3.2
         with:
           curseforge-id: fabric-paxels
           curseforge-token: "${{env.CURSEFORGE_TOKEN}}"
