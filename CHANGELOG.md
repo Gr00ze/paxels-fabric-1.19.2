@@ -1,2 +1,2 @@
--Balanced Attack speed of every paxels \
--Added en_us.json
+-Balanced paxel dmg based on axe dmg tier
+-Added recipe on vanilla recipebook (with recipe autogenerating methods)
