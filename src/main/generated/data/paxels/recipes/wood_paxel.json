@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:wooden_axe"
+    },
+    "P": {
+      "item": "minecraft:wooden_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:wooden_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ASP",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "item": "paxels:wood_paxel"
+  }
+}

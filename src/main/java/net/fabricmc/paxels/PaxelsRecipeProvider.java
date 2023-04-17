@@ -7,8 +7,9 @@ import net.minecraft.data.server.RecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
+import net.minecraft.recipe.CuttingRecipe;
+import net.minecraft.recipe.StonecuttingRecipe;
 
 import java.util.function.Consumer;
 
@@ -19,14 +20,21 @@ public class PaxelsRecipeProvider extends FabricRecipeProvider {
 
     @Override
     protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-//        ShapedRecipeJsonBuilder.create(PaxelsMod.PAXELS[0])
-//                .pattern("CCC")
-//                .pattern("CS ")
-//                .pattern("SC ")
-//                .input('C', Blocks.COBBLESTONE)
-//                .input('S', Items.STICK)
-//                .offerTo(exporter);
-        ShapelessRecipeJsonBuilder.create(PaxelsMod.PAXELS[0]).input(Items.COBBLESTONE).offerTo(exporter);
-
+        for (int i = 0; i < 6; i++) {
+            ShapedRecipeJsonBuilder
+                    .create(PaxelsMod.PAXELS[i])
+                    .input('A', PaxelsMod.AXES[i])
+                    .input('P', PaxelsMod.PICKAXES[i])
+                    .input('S', PaxelsMod.SHOVELS[i])
+                    .input('s', Items.STICK)
+                    .pattern("ASP")
+                    .pattern(" s ")
+                    .pattern(" s ")
+                    .criterion("has_axe", conditionsFromItem(Items.WOODEN_AXE))
+                    .criterion("has_pickaxe", conditionsFromItem(Items.WOODEN_PICKAXE))
+                    .criterion("has_shovel", conditionsFromItem(Items.WOODEN_SHOVEL))
+                    .offerTo(exporter);
+        }
     }
+
 }
