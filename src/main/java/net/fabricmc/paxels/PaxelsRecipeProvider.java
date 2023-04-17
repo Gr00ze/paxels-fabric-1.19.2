@@ -30,9 +30,9 @@ public class PaxelsRecipeProvider extends FabricRecipeProvider {
                     .pattern("ASP")
                     .pattern(" s ")
                     .pattern(" s ")
-                    .criterion("has_axe", conditionsFromItem(Items.WOODEN_AXE))
-                    .criterion("has_pickaxe", conditionsFromItem(Items.WOODEN_PICKAXE))
-                    .criterion("has_shovel", conditionsFromItem(Items.WOODEN_SHOVEL))
+                    .criterion("has_axe", conditionsFromItem(PaxelsMod.AXES[i]))
+                    .criterion("has_pickaxe", conditionsFromItem(PaxelsMod.PICKAXES[i]))
+                    .criterion("has_shovel", conditionsFromItem(PaxelsMod.SHOVELS[i]))
                     .offerTo(exporter);
         }
     }
