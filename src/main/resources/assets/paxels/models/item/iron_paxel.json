@@ -4,5 +4,6 @@
     "layer0": "minecraft:item/iron_pickaxe",
     "layer1": "minecraft:item/iron_axe",
     "layer2": "minecraft:item/iron_shovel"
+
   }
 }
