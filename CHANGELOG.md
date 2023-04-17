@@ -1,2 +1,1 @@
--Balanced paxel dmg based on axe dmg tier
--Added recipe on vanilla recipebook (with recipe autogenerating methods)
+-fixed advancements right tier
