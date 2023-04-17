@@ -36,8 +36,8 @@ public class PaxelItem extends MiningToolItem {
     //private static final float functionAS = (float)Math.pow(Math.E,(pickaxeAS + axeAS + shovelAS)*0.3) - 4;
     private static final float functionAS = getNewAttackSpeed(pickaxeAS,axeAS,shovelAS);
     private  static final float baseAttackDamage = 1;
-    protected PaxelItem(ToolMaterial material, Settings settings) {
-        super(baseAttackDamage + material.getAttackDamage() * 3, functionAS, material, null, settings);
+    protected PaxelItem(ToolMaterial material, Settings settings,float axeDmgModifier) {
+        super(baseAttackDamage + material.getAttackDamage() * 2 +axeDmgModifier, functionAS, material, null, settings);
 
     }
 

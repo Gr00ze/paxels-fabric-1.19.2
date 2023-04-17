@@ -2,13 +2,9 @@ package net.fabricmc.paxels;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,16 +19,6 @@ public class PaxelsMod implements ModInitializer {
 
 	public static final Item[] PAXELS = new Item[6];
 
-
-	/*public static final Item template_paxel = Registry
-			.register(Registry.ITEM,
-					new Identifier(modID,"stone_paxel"),
-					new PaxelItem(ToolMaterials.STONE, new Item.Settings()
-			.maxCount(1)
-			.maxDamage(ToolMaterials.STONE.getDurability() * 3)
-			.rarity(Rarity.COMMON)
-			.fireproof()));
-*/
 	private static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder
 			.create(new Identifier(modID,"paxel_group")).build();
 
@@ -45,6 +31,30 @@ public class PaxelsMod implements ModInitializer {
 			ToolMaterials.GOLD,
 			ToolMaterials.DIAMOND,
 			ToolMaterials.NETHERITE
+	};
+	public static AxeItem[] AXES = new AxeItem[]{
+			(AxeItem) Items.WOODEN_AXE,
+			(AxeItem) Items.STONE_AXE,
+			(AxeItem) Items.IRON_AXE,
+			(AxeItem) Items.GOLDEN_AXE,
+			(AxeItem) Items.DIAMOND_AXE,
+			(AxeItem) Items.NETHERITE_AXE,
+	};
+	public static PickaxeItem[] PICKAXES = new PickaxeItem[]{
+			(PickaxeItem) Items.WOODEN_PICKAXE,
+			(PickaxeItem) Items.STONE_PICKAXE,
+			(PickaxeItem) Items.IRON_PICKAXE,
+			(PickaxeItem) Items.GOLDEN_PICKAXE,
+			(PickaxeItem) Items.DIAMOND_PICKAXE,
+			(PickaxeItem) Items.NETHERITE_PICKAXE,
+	};
+	public static ShovelItem[] SHOVELS = new ShovelItem[]{
+			(ShovelItem) Items.WOODEN_SHOVEL,
+			(ShovelItem) Items.STONE_SHOVEL,
+			(ShovelItem) Items.IRON_SHOVEL,
+			(ShovelItem) Items.GOLDEN_SHOVEL,
+			(ShovelItem) Items.DIAMOND_SHOVEL,
+			(ShovelItem) Items.NETHERITE_SHOVEL,
 	};
 
 
@@ -73,7 +83,7 @@ public class PaxelsMod implements ModInitializer {
 			PAXELS[i] = Registry
 					.register(Registry.ITEM,
 							new Identifier(modID, TOOLMATERIALNAMES[i] +"_paxel"),
-							new PaxelItem(TOOLMATERIALS[i], itemSettings));
+							new PaxelItem(TOOLMATERIALS[i], itemSettings,AXES[i].getAttackDamage()));
 
 		}
 		LOGGER.info("Hi guys, I'm loading paxels for you!");
