@@ -1,1 +1,3 @@
--fixed advancements right tier
+-fixed advancements right tier\
+-added scaling attack speed based on axe\
+-added translation on group creative tab
