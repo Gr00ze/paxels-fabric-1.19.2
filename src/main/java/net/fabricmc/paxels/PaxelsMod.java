@@ -20,7 +20,7 @@ public class PaxelsMod implements ModInitializer {
 	public static final Item[] PAXELS = new Item[6];
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder
-			.create(new Identifier(modID,"paxel_group")).build();
+			.create(new Identifier(modID,"paxel_group")).icon(()->PAXELS[4].getDefaultStack()).build();
 
 
 
@@ -81,6 +81,7 @@ public class PaxelsMod implements ModInitializer {
 							new PaxelItem(TOOLMATERIALS[i], itemSettings,attackDamage,AXESATTACKSPEED[i]));
 
 		}
+
 		LOGGER.info("Hi guys, I'm loading paxels for you!");
 
 
