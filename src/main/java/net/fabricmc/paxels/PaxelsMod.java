@@ -69,13 +69,6 @@ public class PaxelsMod implements ModInitializer {
 				.rarity(Rarity.COMMON)
 				.group(ITEM_GROUP);
 
-		//some random words TO DELETE
-
-
-
-
-
-
 		for(int i = 0; i< PAXELS.length; i++){
 			itemSettings.maxDamage(TOOLMATERIALS[i].getDurability() * 3);
 			if(TOOLMATERIALS[i].equals(ToolMaterials.NETHERITE)){
