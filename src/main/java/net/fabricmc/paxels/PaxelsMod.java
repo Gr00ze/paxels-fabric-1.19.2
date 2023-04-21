@@ -23,6 +23,7 @@ public class PaxelsMod implements ModInitializer {
 			.create(new Identifier(modID,"paxel_group")).build();
 
 
+
 	public static String[] TOOLMATERIALNAMES = new String[]{"wood","stone","iron","gold","diamond","netherite"};
 	public static ToolMaterials[] TOOLMATERIALS = new ToolMaterials[]{
 			ToolMaterials.WOOD,
@@ -56,7 +57,7 @@ public class PaxelsMod implements ModInitializer {
 			(ShovelItem) Items.DIAMOND_SHOVEL,
 			(ShovelItem) Items.NETHERITE_SHOVEL,
 	};
-
+	private static final float[] AXESATTACKSPEED = new float[]{-3.2F,-3.2F,-3.1F,-3.0F,-3.0F,-3.0F};
 
 	@Override
 	public void onInitialize() {
@@ -80,10 +81,11 @@ public class PaxelsMod implements ModInitializer {
 			if(TOOLMATERIALS[i].equals(ToolMaterials.NETHERITE)){
 				itemSettings.fireproof();
 			}
+			float attackDamage = AXES[i].getAttackDamage() + SHOVELS[i].getAttackDamage() + PICKAXES[i].getAttackDamage();
 			PAXELS[i] = Registry
 					.register(Registry.ITEM,
 							new Identifier(modID, TOOLMATERIALNAMES[i] +"_paxel"),
-							new PaxelItem(TOOLMATERIALS[i], itemSettings,AXES[i].getAttackDamage()));
+							new PaxelItem(TOOLMATERIALS[i], itemSettings,attackDamage,AXESATTACKSPEED[i]));
 
 		}
 		LOGGER.info("Hi guys, I'm loading paxels for you!");

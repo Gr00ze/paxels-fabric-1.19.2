@@ -32,12 +32,12 @@ public class PaxelItem extends MiningToolItem {
     protected static final Map<Block, Block> STRIPPED_BLOCKS;
     protected static final HashMap<Block,BlockState> PATH_STATES;
 
-    private static final float pickaxeAS=-2.8F,axeAS=-3.2F,shovelAS=-3.0F;
+    private static final float pickaxeAS=-2.8F,shovelAS=-3.0F;
     //private static final float functionAS = (float)Math.pow(Math.E,(pickaxeAS + axeAS + shovelAS)*0.3) - 4;
-    private static final float functionAS = getNewAttackSpeed(pickaxeAS,axeAS,shovelAS);
-    private  static final float baseAttackDamage = 1;
-    protected PaxelItem(ToolMaterial material, Settings settings,float axeDmgModifier) {
-        super(baseAttackDamage + material.getAttackDamage() * 2 +axeDmgModifier, functionAS, material, null, settings);
+
+ 
+    protected PaxelItem(ToolMaterial material, Settings settings,float attackDamage,float axeAS) {
+        super(attackDamage, getNewAttackSpeed(pickaxeAS,shovelAS,axeAS), material, null, settings);
 
     }
 
