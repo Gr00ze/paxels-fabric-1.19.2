@@ -1,0 +1,6 @@
+{
+  "parent": "paxels:item/netherite_paxel",
+  "textures": {
+    "layer3": "minecraft:item/netherite_ingot"
+  }
+}

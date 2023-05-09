@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "paxels:netherite_upgrade"
+  },
+  "base": {
+    "item": "paxels:diamond_paxel"
+  },
+  "result": {
+    "item": "paxels:netherite_paxel"
+  }
+}
