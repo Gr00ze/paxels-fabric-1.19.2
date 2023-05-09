@@ -1,11 +1,11 @@
-package net.fabricmc.paxels;
+package net.fabricmc.simplepaxels;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
-public class PaxelsDataGenerator implements DataGeneratorEntrypoint {
+public class SPDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        fabricDataGenerator.addProvider(PaxelsRecipeProvider::new);
+        fabricDataGenerator.addProvider(SPRecipeProvider::new);
     }
 }

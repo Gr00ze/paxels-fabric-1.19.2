@@ -1,4 +1,4 @@
-package net.fabricmc.paxels;
+package net.fabricmc.simplepaxels;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -9,7 +9,9 @@ import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PaxelsMod implements ModInitializer {
+import static net.fabricmc.simplepaxels.SPItems.PAXELS;
+
+public class SPMod implements ModInitializer {
 	public static final String modID = "paxels";
 
 	// This logger is used to write text to the console and the log file.
@@ -17,9 +19,11 @@ public class PaxelsMod implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(modID);
 
-	public static final Item[] PAXELS = new Item[6];
 
-	private static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder
+
+
+
+	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder
 			.create(new Identifier(modID,"paxel_group")).icon(()->PAXELS[4].getDefaultStack()).build();
 
 
@@ -55,7 +59,7 @@ public class PaxelsMod implements ModInitializer {
 			(ShovelItem) Items.IRON_SHOVEL,
 			(ShovelItem) Items.GOLDEN_SHOVEL,
 			(ShovelItem) Items.DIAMOND_SHOVEL,
-			(ShovelItem) Items.NETHERITE_SHOVEL,
+			(ShovelItem) Items.NETHERITE_SHOVEL
 	};
 	private static final float[] AXESATTACKSPEED = new float[]{-3.2F,-3.2F,-3.1F,-3.0F,-3.0F,-3.0F};
 
@@ -81,6 +85,8 @@ public class PaxelsMod implements ModInitializer {
 							new PaxelItem(TOOLMATERIALS[i], itemSettings,attackDamage,AXESATTACKSPEED[i]));
 
 		}
+
+
 
 		LOGGER.info("Hi guys, I'm loading paxels for you!");
 

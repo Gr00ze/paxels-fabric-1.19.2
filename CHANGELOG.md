@@ -1,4 +1,5 @@
--fixed advancements right tier\
--added scaling attack speed based on axe\
--added translation on creative tab title\
--added image on creative tab
+-added netherite_upgrade\
+-added netherite_upgrade entry on en_us.json\
+-added shapeless crafting for netherite_upgrade\
+-added netherite_paxel recipe on smithing table\
+-(internal) reorganized classes

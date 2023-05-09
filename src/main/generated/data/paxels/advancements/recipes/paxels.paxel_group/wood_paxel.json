@@ -18,7 +18,18 @@
         "items": [
           {
             "items": [
-              "minecraft:wooden_pickaxe",
+              "minecraft:wooden_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
               "minecraft:wooden_shovel"
             ]
           }
@@ -26,7 +37,6 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-
     "has_the_recipe": {
       "conditions": {
         "recipe": "paxels:wood_paxel"
@@ -38,7 +48,7 @@
     [
       "has_axe",
       "has_pickaxe",
-
+      "has_shovel",
       "has_the_recipe"
     ]
   ],

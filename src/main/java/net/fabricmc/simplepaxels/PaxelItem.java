@@ -1,4 +1,4 @@
-package net.fabricmc.paxels;
+package net.fabricmc.simplepaxels;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableMap;

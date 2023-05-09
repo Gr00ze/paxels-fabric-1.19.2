@@ -18,9 +18,11 @@
 
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": ["net.fabricmc.paxels.PaxelsDataGenerator"],
+    "fabric-datagen": [
+      "net.fabricmc.simplepaxels.SPDataGenerator"
+    ],
     "main": [
-      "net.fabricmc.paxels.PaxelsMod"
+      "net.fabricmc.simplepaxels.SPMod"
     ]
   },
   "mixins": [
